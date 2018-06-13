@@ -11,8 +11,8 @@ export const good = (state,action)=>{
 			}
 		default :
 			return {
-			    isFetching: false,
-			    goods: [1,2]
+			    isFetching: true,
+			    goods: [1,3]
 			}
 	}
 }

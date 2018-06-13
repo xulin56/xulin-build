@@ -63,8 +63,8 @@ class InputSelect extends Component{
     }
     autoResult(res,arr){
         const {name,onChange,config} = this.props;
-        arr.length > 0 && res!='' ? (arr[0].active = true) : 
-        (arr.filter((item)=>{return item.active = false}));
+        arr.length > 0 && res!='' ? (arr[0].active = true) :
+            (arr.filter((item)=>{return item.active = false}));
         return arr;
     }
     mouseLi(idx){
@@ -87,31 +87,32 @@ class InputSelect extends Component{
         const borderCls = dropDown ? '' : 'blueBorder';
         return(
             <div className={"select-comp "+borderCls} onClick={()=>this.selectClick()}
-                ref={(container)=>{this.selectContainer=container}}
+                 ref={(container)=>{this.selectContainer=container}}
             >
                 {
                     value ?
-                    dropOptions && dropOptions.map((item,idx)=>{
+                        dropOptions && dropOptions.map((item,idx)=>{
                             if(value == item.value){
                                 return <input key={idx} defaultValue={item.label}
-                                 placeholder={placeholder}
-                                 onChange={this.searchSelect}
+                                              placeholder={placeholder}
+                                              onChange={this.searchSelect}
                                 />
                             }
+                            return '';
                         })
-                    : <input placeholder={placeholder} onChange={this.searchSelect}/>
+                        : <input placeholder={placeholder} onChange={this.searchSelect}/>
 
                 }
                 <ul>
-                {
-                    dropOptions && dropOptions.map((item,idx)=>{
-                        return <li key={idx} 
-                        onMouseEnter ={()=>this.mouseLi(idx)}
-                        onClick={()=>this.changeItem(name,item.value)} 
-                                className={item.active ? 'active' : ''}
-                        >{item.label}</li>
-                    })
-                }
+                    {
+                        dropOptions && dropOptions.map((item,idx)=>{
+                            return <li key={idx}
+                                       onMouseEnter ={()=>this.mouseLi(idx)}
+                                       onClick={()=>this.changeItem(name,item.value)}
+                                       className={item.active ? 'active' : ''}
+                            >{item.label}</li>
+                        })
+                    }
                 </ul>
             </div>
         )

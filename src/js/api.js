@@ -81,7 +81,7 @@ const STATIC_URL = {
     mobileRegister : '/crm/user/mobileRegister',//手机号注册
     userNameLogin : '/crm/user/userNameLogin',//用户名登录
     mobileLogin : '/crm/user/mobileLogin',//手机号登录
-    userinfo : '/crm/user/info',//用户信息
+    userinfo : 'crm/user/info',//用户信息
     sendForgetPwdCode : '/crm/user/sendForgetPwdCode',//发送找回密码验证码
     checkForgetPwdCode : '/crm/user/checkForgetPwdCode',//校验找回密码验证码
     editPasswordByMobile : '/crm/user/editPasswordByMobile',//根据手机号修改密码

@@ -8,8 +8,8 @@ export const isLoading = (state,action)=>{
             isLoading : action.isLoading
           }
         default :
-        return {
-          isLoading : false
-        }
+            return {
+              isLoading : false
+            }
     }
 }

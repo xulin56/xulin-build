@@ -20,19 +20,25 @@ class Goods extends Component {
     componentDidMount() {
         const {data} = this.state;
         const {dispatch} = this.props;
-        dispatch(actions.getGoods('RECEIVE_GOODS',data));
+        setTimeout(()=>{
+            dispatch(actions.getGoods('RECEIVE_GOODS',data));
+        },500)
     }
     render() {
         return  (
             <ul className="goods">
                 {
-                    this.props.data.map((ele, idx) => (
-                        <li key={idx}>
-                            <span>{ele.name}</span> |
-                            <span>￥ {ele.price}</span> |
-                            <span>剩余 {ele.amount} 件</span>
-                        </li>
-                    ))
+                    !this.props.isFetching
+                        ?
+                            this.props.goods.map((ele, idx) => (
+                                <li key={idx}>
+                                    <span>{ele.name}</span> |
+                                    <span>￥ {ele.price}</span> |
+                                    <span>剩余 {ele.amount} 件</span>
+                                </li>
+                            ))
+                        :
+                        'loading.....'
                 }
             </ul>
         );
@@ -40,12 +46,10 @@ class Goods extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  if(!state.good.isFetching){
     return {
             isFetching: state.good.isFetching,
-            data: state.good.goods
+            goods: state.good.goods
         }
-  }
 };
 
 export default connect(mapStateToProps)(Goods);

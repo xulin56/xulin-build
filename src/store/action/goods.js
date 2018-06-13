@@ -1,6 +1,6 @@
-export const getGoods = (type,data)=>{
+export const getGoods = (type,goods)=>{
 		return {
 			type: type,
-			goods : data
+			goods
 		}
 }

@@ -38,7 +38,7 @@ class Select extends Component{
         document.removeEventListener('click',this.eventListener);
     }
     render(){
-        const {name,config,value} = this.props;
+        const {name,label,config,value} = this.props;
         const {dropDown} = this.state;
         const borderCls = dropDown ? '' : 'blueBorder';
         return(
@@ -47,18 +47,19 @@ class Select extends Component{
                     value ?
                         config.options && config.options.map((item,idx)=>{
                             if(value == item.value){
-                                return <span key={idx}>{item.label}</span>;
+                                return <span key={idx}>{item.label}</span>
                             }
+                            return '';
                         })
-                    : (config.placeholder ? <span>{config.placeholder}</span> : '')
+                        : (config.placeholder ? <span>{config.placeholder}</span> : '')
 
                 }
                 <ul>
-                {
-                    config && config.options && config.options.map((item,idx)=>{
-                        return <li key={idx} onClick={()=>this.changeItem(name,item.value)}>{item.label}</li>
-                    })
-                }
+                    {
+                        config && config.options && config.options.map((item,idx)=>{
+                            return <li key={idx} onClick={()=>this.changeItem(name,item.value)}>{item.label}</li>
+                        })
+                    }
                 </ul>
             </div>
         )
