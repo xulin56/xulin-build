@@ -20,10 +20,9 @@ class Goods extends Component {
     componentDidMount() {
         const {data} = this.state;
         const {dispatch} = this.props;
-        dispatch(actions.getGoods(data));
+        dispatch(actions.getGoods('RECEIVE_GOODS',data));
     }
     render() {
-      console.log(this.props.data)
         return  (
             <ul className="goods">
                 {
@@ -41,11 +40,12 @@ class Goods extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state)
+  if(!state.good.isFetching){
     return {
             isFetching: state.good.isFetching,
             data: state.good.goods
         }
+  }
 };
 
 export default connect(mapStateToProps)(Goods);

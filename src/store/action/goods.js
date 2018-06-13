@@ -1,9 +1,6 @@
-export const RECEIVE_GOODS = 'receiveGoods';
-export const REQUEST_GOODS = 'requestGoods';
-
-export const getGoods = (data)=>{
+export const getGoods = (type,data)=>{
 		return {
-			type: RECEIVE_GOODS,
+			type: type,
 			goods : data
 		}
 }

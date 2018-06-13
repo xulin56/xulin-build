@@ -1,6 +1,5 @@
 import {ajax,alerts,Type,lStore} from './yydjs';
 import {store} from 'store';
-import {browser} from 'src';
 import * as action from 'store/action/loading';
 import md5 from 'md5';
 let baseUrl='/app/http/';
@@ -19,9 +18,6 @@ const ajaxWrap=function(json){
         before:function(xhr){
             //loading显示处理
             store.dispatch(action.getLoading(true));;
-        },
-        error : function(){
-            store.dispatch(action.getLoading(false));;
         },
         after:function(xhr){
             //loading隐藏处理
