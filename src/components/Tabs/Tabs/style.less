@@ -1,0 +1,27 @@
+@import "../../style/color";
+.tabs {
+  .Container{
+    border-top: none;
+  }
+  .tabs-nav {
+    display: flex;
+    .icon-A-2 {
+      font-size:.16rem;
+    }
+  }
+  li.active {
+    border-bottom:.01rem solid @tabs-border-color;
+    color:@tabs-active-color;
+  }
+  li {
+    flex:1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:.39rem;
+    .icon {
+      padding-right:0.09rem;
+    }
+  }
+}
