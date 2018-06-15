@@ -10,8 +10,8 @@ export default class Home extends React.Component{
     render(){
         return(
             <div className="home">
-              <Route path='/goods' component={Good} />
-              <Route path='/welcome' component={Welcome} />
+                <Route path='/goods' component={Good} />
+                <Route path='/welcome' component={Welcome} />
                 <Route path='/demo' component={Demo} />
                 <Route path='/login' component={Login} />
             </div>
