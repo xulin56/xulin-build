@@ -3,6 +3,8 @@ import {autobind} from 'core-decorators';
 import API from 'js/api';
 import Select from 'components/Select';
 import {Tabs,TabsItem} from 'components/Tabs';
+import {Link} from 'react-router-dom';
+import {browser} from 'src';
 import './style.less';
 
 @autobind
@@ -55,8 +57,8 @@ export default class Demo extends React.Component{
                     }
                 />
                 <Tabs labels={nav} tabClick={this.tab} tabIndex={tabIndex}>
-                    <TabsItem><div>34903493</div></TabsItem>
-                    <TabsItem><div>233434</div></TabsItem>
+                    <TabsItem><div>34903493 <button onClick={_=>browser.push('/goods')}>跳转</button> </div></TabsItem>
+                    <TabsItem><div>233434 <Link to='/welcome'>去吧</Link> </div></TabsItem>
                 </Tabs>
             </div>
         )

@@ -7,10 +7,6 @@ import * as actions from 'store/action/loading';
 import 'components/style/main.less';
 
 class App extends Component {
-    componentDidMount() {
-      const {dispatch} = this.props;
-      dispatch(actions.getLoading(true));
-    }
     render() {
        const {isLoading}=this.props;
         return (
