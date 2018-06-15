@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Home from 'views/Home';
-import Page404 from 'views/Page404';
 import {Switch,Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Loading from 'components/Loading';
@@ -13,7 +12,6 @@ class App extends Component {
             <div className="app">
                   <Switch>
                       <Route path="/" component={Home} />
-                      <Route path="*" component={Page404} />
                   </Switch>
                  <Loading show={isLoading} />
             </div>
