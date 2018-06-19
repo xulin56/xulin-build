@@ -62,14 +62,13 @@ class InputSelect extends Component{
         this.setState({dropOptions:newArr});
     }
     autoResult(res,arr){
-        const {name,onChange,config} = this.props;
         arr.length > 0 && res!='' ? (arr[0].active = true) :
             (arr.filter((item)=>{return item.active = false}));
         return arr;
     }
     mouseLi(idx){
         let {dropOptions} = this.state;
-        const arr = dropOptions.filter((item,idx)=>{
+        dropOptions.filter((item,idx)=>{
             return item.active = false;
         });
         dropOptions[idx].active = true;
@@ -82,7 +81,7 @@ class InputSelect extends Component{
         document.removeEventListener('keyup',this.dealKeyEvent);
     }
     render(){
-        const {name,label,config,value,placeholder} = this.props;
+        const {name,value,placeholder} = this.props;
         const {dropDown,dropOptions} = this.state;
         const borderCls = dropDown ? '' : 'blueBorder';
         return(

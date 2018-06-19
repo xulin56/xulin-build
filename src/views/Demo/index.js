@@ -3,8 +3,10 @@ import {autobind} from 'core-decorators';
 import API from 'js/api';
 import Select from 'components/Select';
 import {Tabs,TabsItem} from 'components/Tabs';
+import {success,error} from 'components/Message';
 import {Link} from 'react-router-dom';
 import {browser} from 'src';
+import {getDecimal} from 'js';
 import './style.less';
 
 @autobind
@@ -27,12 +29,22 @@ export default class Demo extends React.Component{
 
     }
     componentDidMount(){
-        API.UserInfo({},(res)=>{
-            console.log(res)
+        console.log(getDecimal(12232323))
+        API.GetYearDate({
+            code: 'bitcoin',
+            startTime: 1496651489384,
+            endTime: 1528187468359
+        },(res)=>{
+            if(res.code==='0000'){
+                success('成功')
+            }
         })
     }
     change(name,value){
         this.setState({[name]:value});
+    };
+    changeLang() {
+        error('成功切换')
     }
     render(){
       const {nav,tabIndex,demo} = this.state;
@@ -60,6 +72,7 @@ export default class Demo extends React.Component{
                     <TabsItem><div>34903493 <button onClick={_=>browser.push('/goods')}>跳转</button> </div></TabsItem>
                     <TabsItem><div>233434 <Link to='/welcome'>去吧</Link> </div></TabsItem>
                 </Tabs>
+                <button id='txt' name='txt' onClick={this.changeLang}>切换</button>
             </div>
         )
     }

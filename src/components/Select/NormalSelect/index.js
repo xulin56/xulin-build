@@ -38,7 +38,7 @@ class Select extends Component{
         document.removeEventListener('click',this.eventListener);
     }
     render(){
-        const {name,label,config,value} = this.props;
+        const {name,config,value} = this.props;
         const {dropDown} = this.state;
         const borderCls = dropDown ? '' : 'blueBorder';
         return(

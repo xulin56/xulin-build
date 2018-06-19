@@ -2768,7 +2768,8 @@ function ajax(json){
 				xhr.setRequestHeader(attr,json.headers[attr]);
 			}
 		}
-		xhr.send(json.data);
+        console.log(json.data)
+        xhr.send(json.data);
 	}
 
 	json.before&&Type(json.before)=='function'&&json.before(xhr);
