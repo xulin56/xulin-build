@@ -36,7 +36,8 @@ export default class Demo extends React.Component{
             endTime: 1528187468359
         },(res)=>{
             if(res.code==='0000'){
-                success('成功')
+                success('成功');
+                console.log(JSON.parse(res.data))
             }
         })
     }

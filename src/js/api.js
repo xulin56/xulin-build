@@ -1,4 +1,4 @@
-import {myAjax,Type,lStore,isEmpty} from 'xulinjs';
+import {myAjax,dataType,lStore,isEmpty} from 'xulinjs';
 import {store} from 'store';
 import * as action from 'store/action/loading';
 import {error} from 'components/Message';
@@ -25,7 +25,7 @@ const ajaxWrap=function(json){
         success:function(data){
             //只要成功都会走
             //成功code已经失败code处理
-            if(Type(data)==="object"){
+            if(dataType(data)==="object"){
                 json.success&&json.success(data);
                 return;
             }
