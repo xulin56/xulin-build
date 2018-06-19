@@ -11,7 +11,7 @@ export default class Tabs extends React.Component {
         tabIndex : PropTypes.number,
     };
     static defaultProps = {
-        className: "",
+        tabIndex: 0,
     };
 
     state = {

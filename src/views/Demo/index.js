@@ -22,7 +22,6 @@ export default class Demo extends React.Component{
           icon : 'A-2'
         },
       ],
-      tabIndex : 0,
         demo : '1'
     }
     tab(index) {
@@ -48,7 +47,7 @@ export default class Demo extends React.Component{
         error('成功切换')
     }
     render(){
-      const {nav,tabIndex,demo} = this.state;
+      const {nav,demo} = this.state;
         return(
             <div className="demo">
               <i className='iconfont icon-jiantou'></i>
@@ -69,7 +68,7 @@ export default class Demo extends React.Component{
                     }
                     }
                 />
-                <Tabs labels={nav} tabClick={this.tab} tabIndex={tabIndex}>
+                <Tabs labels={nav} tabClick={this.tab}>
                     <TabsItem><div>34903493 <button onClick={_=>browser.push('/goods')}>跳转</button> </div></TabsItem>
                     <TabsItem><div>233434 <Link to='/welcome'>去吧</Link> </div></TabsItem>
                 </Tabs>
