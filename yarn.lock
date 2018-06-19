@@ -7298,9 +7298,9 @@ xtend@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 
-xulinjs@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/xulinjs/-/xulinjs-2.0.0.tgz#69a655d38607586095f41c4be18d2b622b3c259f"
+xulinjs@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/xulinjs/-/xulinjs-2.0.2.tgz#aa6f6db9450cd05da53593f3b8751478a5e8b7da"
 
 y18n@^3.2.1:
   version "3.2.1"

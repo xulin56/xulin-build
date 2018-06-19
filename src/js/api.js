@@ -1,4 +1,4 @@
-import {myAjax,Type,lStore,isEmpty} from './index';
+import {myAjax,Type,lStore,isEmpty} from 'xulinjs';
 import {store} from 'store';
 import * as action from 'store/action/loading';
 import {error} from 'components/Message';
