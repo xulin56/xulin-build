@@ -3,7 +3,7 @@ import Home from 'views/Home';
 import {Switch,Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Loading from 'components/Loading';
-import 'components/style/main.less';
+import 'style/main.less';
 
 class App extends Component {
     render() {

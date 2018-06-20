@@ -89,7 +89,7 @@ module.exports = {
       'views': path.resolve(__dirname, '../src/views'),
       'components' : path.resolve(__dirname, '../src/components'),
       'store' : path.resolve(__dirname, '../src/store'),
-      'style' : path.resolve(__dirname, '../src/components/style'),
+      'style' : path.resolve(__dirname, '../src/style'),
       'js' : path.resolve(__dirname, '../src/js'),
       'images' : path.resolve(__dirname, '../src/images'),
       // Support React Native Web
