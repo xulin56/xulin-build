@@ -6,7 +6,7 @@ import {Tabs,TabsItem} from 'components/Tabs';
 import {success,error} from 'components/Message';
 import {Link} from 'react-router-dom';
 import {browser} from 'src';
-import {getDecimal} from 'js';
+import Son from './Son';
 import './style.less';
 
 @autobind
@@ -22,13 +22,13 @@ export default class Demo extends React.Component{
           icon : 'A-2'
         },
       ],
-        demo : '1'
+        demo : '1',
+        num : 1
     }
     tab(index) {
 
     }
     componentDidMount(){
-        console.log(getDecimal(12232323))
         API.GetYearDate({
             code: 'bitcoin',
             startTime: 1496651489384,
@@ -46,8 +46,18 @@ export default class Demo extends React.Component{
     changeLang() {
         error('成功切换')
     }
+    buy() {
+        this.setState({
+            num : 3
+        })
+    }
+    sell() {
+        this.setState({
+            num : 5
+        })
+    }
     render(){
-      const {nav,demo} = this.state;
+      const {nav,demo,num} = this.state;
         return(
             <div className="demo">
               <i className='iconfont icon-jiantou'></i>
@@ -72,7 +82,10 @@ export default class Demo extends React.Component{
                     <TabsItem><div>34903493 <button onClick={_=>browser.push('/goods')}>跳转</button> </div></TabsItem>
                     <TabsItem><div>233434 <Link to='/welcome'>去吧</Link> </div></TabsItem>
                 </Tabs>
-                <button id='txt' name='txt' onClick={this.changeLang}>切换</button>
+                <button onClick={this.changeLang}>切换</button>
+                <button onClick={this.buy}>buy</button>
+                <button onClick={this.sell}>sell</button>
+                <Son num={num} />
             </div>
         )
     }
