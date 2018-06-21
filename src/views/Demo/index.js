@@ -7,7 +7,8 @@ import {success,error} from 'components/Message';
 import {Link} from 'react-router-dom';
 import {browser} from 'src';
 import Son from './Son';
-import {getBottom,goTop,ScrollImgLeft} from 'js';
+import {getBottom,goTop,ScrollImgLeft,idDom} from 'js';
+import {Motion, spring} from 'react-motion';
 import './style.less';
 
 @autobind
@@ -30,7 +31,7 @@ export default class Demo extends React.Component{
 
     }
     componentDidMount(){
-        ScrollImgLeft()
+        ScrollImgLeft(idDom('scroll_begin'),idDom('scroll_end'),idDom('scroll_div'))
         getBottom(()=>{
             console.log('ok')
         });
@@ -83,16 +84,13 @@ export default class Demo extends React.Component{
                     }
                     }
                 />
-                <div id="scroll_div" class="fl">
-                    <div id="scroll_begin">
-                        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-                        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-                        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-                        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-                        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-                        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-                        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-                    </div>
+                <div id="scroll_div" className="fl">
+                    <ul id="scroll_begin" className='list'>
+                        <li>恭喜793765***获得 <span className="pad_right">50元巨人点卡奖励</span></li>
+                        <li>恭喜793765***获得 <span className="pad_right">50元巨人点卡奖励</span></li>
+                        <li>恭喜793765***获得 <span className="pad_right">50元巨人点卡奖励</span></li>
+                        <li>恭喜793765***获得 <span className="pad_right">50元巨人点卡奖励</span></li>
+                    </ul>
                     <div id="scroll_end"></div>
                 </div>
                 <Tabs labels={nav} tabClick={this.tab}>
@@ -105,6 +103,9 @@ export default class Demo extends React.Component{
                 <div>胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就胜利大街老实交代胜利大街胜利大街胜利大街胜利大街历史的记录时间段杀伤力大家欧威43喔就</div>
                 <button onClick={this.getScroll}>获取滚动条</button>
                 <Son num={num} />
+                <Motion defaultStyle={{x: 0}} style={{x: spring(10)}}>
+                    {value => <div>{value.x}</div>}
+                </Motion>
                 <button onClick={()=>goTop()}>返回顶部</button>
             </div>
         )
