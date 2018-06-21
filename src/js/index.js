@@ -792,7 +792,84 @@ function getDecimal(val){
         }
     }
 
-}
+};
+
+//文本被卷走的高度
+function getScrollTop(){
+    var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+    if(document.body){
+        bodyScrollTop = document.body.scrollTop;
+    }
+    if(document.documentElement){
+        documentScrollTop = document.documentElement.scrollTop;
+    }
+    scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+    return scrollTop;
+};
+
+//获取文档的总高度
+function getScrollHeight(){
+    var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+    if(document.body){
+        bodyScrollHeight = document.body.scrollHeight;
+    }
+    if(document.documentElement){
+        documentScrollHeight = document.documentElement.scrollHeight;
+    }
+    scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+    return scrollHeight;
+};
+
+//获取文本可见高度
+function getWindowHeight(){
+    var windowHeight = 0;
+    if(document.compatMode == "CSS1Compat"){
+        windowHeight = document.documentElement.clientHeight;
+    }else{
+        windowHeight = document.body.clientHeight;
+    }
+    return windowHeight;
+};
+
+//滚动条到达底部
+function getBottom(cb){
+    window.onscroll = function(){
+        if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+            cb();
+        }
+    };
+};
+
+function goTop(){
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScroll > 0) {
+        window.requestAnimationFrame(goTop);
+        window.scrollTo (0,currentScroll - (currentScroll/5));
+    }
+};
+
+//文字横向滚动
+function ScrollImgLeft(){
+    var speed=50;
+    var MyMar = null;
+    var scroll_begin = document.getElementById("scroll_begin");
+    var scroll_end = document.getElementById("scroll_end");
+    var scroll_div = document.getElementById("scroll_div");
+    scroll_end.innerHTML=scroll_begin.innerHTML;
+    function Marquee(){
+        if(scroll_end.offsetWidth-scroll_div.scrollLeft<=0)
+            scroll_div.scrollLeft-=scroll_begin.offsetWidth;
+        else
+            scroll_div.scrollLeft++;
+    }
+    MyMar=setInterval(Marquee,speed);
+    scroll_div.onmouseover = function(){
+        clearInterval(MyMar);
+    }
+    scroll_div.onmouseout = function(){
+        MyMar = setInterval(Marquee,speed);
+    }
+};
 
 export {
     idDom,
@@ -837,5 +914,11 @@ export {
     dateFormat1,
     changeTwoDecimal_f,
     getDecimal,
-    myAjax
+    myAjax,
+    getScrollTop,
+    getScrollHeight,
+    getWindowHeight,
+    getBottom,
+    goTop,
+    ScrollImgLeft
 }

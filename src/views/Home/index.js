@@ -11,7 +11,7 @@ export default class Home extends React.Component{
         return(
             <div className="home">
                 <Switch>
-                    <Route path='/' component={Demo} />
+                    <Route exact path='/' component={Demo} />
                     <Route path='/goods' component={Good} />
                     <Route path='/welcome' component={Welcome} />
                     <Route path='/demo' component={Demo} />
