@@ -10,6 +10,10 @@ abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
 
+abs-svg-path@~0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/abs-svg-path/-/abs-svg-path-0.1.1.tgz#df601c8e8d2ba10d4a76d625e236a9a39c2723bf"
+
 accepts@~1.3.4, accepts@~1.3.5:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.5.tgz#eb777df6011723a3b14e8a72c0805c8e86746bd2"
@@ -334,6 +338,13 @@ aws4@^1.6.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.7.0.tgz#d4d0e9b9dbfca77bf08eeb0a8a471550fe39e289"
 
+axios@^0.16.2:
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.16.2.tgz#ba4f92f17167dfbab40983785454b9ac149c3c6d"
+  dependencies:
+    follow-redirects "^1.2.3"
+    is-buffer "^1.1.5"
+
 axobject-query@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-0.1.0.tgz#62f59dbc59c9f9242759ca349960e7a2fe3c36c0"
@@ -395,6 +406,14 @@ babel-core@^6.0.0, babel-core@^6.26.0:
     private "^0.1.8"
     slash "^1.0.0"
     source-map "^0.5.7"
+
+babel-decorators-runtime@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/babel-decorators-runtime/-/babel-decorators-runtime-0.2.0.tgz#bfc7ea240942b338deea00e856a47520be707d8c"
+  dependencies:
+    babel-plugin-syntax-decorators "^6.1.18"
+    babel-runtime "^6.2.0"
+    babel-template "^6.3.0"
 
 babel-eslint@7.2.3:
   version "7.2.3"
@@ -548,6 +567,10 @@ babel-messages@^6.23.0:
   resolved "https://registry.yarnpkg.com/babel-messages/-/babel-messages-6.23.0.tgz#f3cdf4703858035b2a2951c6ec5edf6c62f2630e"
   dependencies:
     babel-runtime "^6.22.0"
+
+babel-plugin-add-module-exports@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-add-module-exports/-/babel-plugin-add-module-exports-0.2.1.tgz#9ae9a1f4a8dc67f0cdec4f4aeda1e43a5ff65e25"
 
 babel-plugin-check-es2015-constants@^6.22.0:
   version "6.22.0"
@@ -1090,6 +1113,10 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+bezier-easing@^2.0.3:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
+
 big.js@^3.1.3:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
@@ -1356,6 +1383,12 @@ camelcase@^4.0.0, camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
+can-promise@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/can-promise/-/can-promise-0.0.1.tgz#7a7597ad801fb14c8b22341dfec314b6bd6ad8d3"
+  dependencies:
+    window-or-global "^1.0.1"
+
 caniuse-api@^1.5.2:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/caniuse-api/-/caniuse-api-1.6.1.tgz#b534e7c734c4f81ec5fbe8aca2ad24354b962c6c"
@@ -1384,6 +1417,10 @@ case-sensitive-paths-webpack-plugin@2.1.1:
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
+
+cax@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/cax/-/cax-1.0.9.tgz#7ce7fcb0ee08ceedc4e6bb44a05ad4c7627164dc"
 
 center-align@^0.1.1:
   version "0.1.3"
@@ -1569,6 +1606,13 @@ color-string@^0.3.0:
   resolved "https://registry.yarnpkg.com/color-string/-/color-string-0.3.0.tgz#27d46fb67025c5c2fa25993bfbf579e47841b991"
   dependencies:
     color-name "^1.0.0"
+
+color-string@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.5.2.tgz#26e45814bc3c9a7cbd6751648a41434514a773a9"
+  dependencies:
+    color-name "^1.0.0"
+    simple-swizzle "^0.2.2"
 
 color@^0.11.0:
   version "0.11.4"
@@ -2077,6 +2121,10 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
+dijkstrajs@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/dijkstrajs/-/dijkstrajs-1.0.1.tgz#d3cd81221e3ea40742cfcde556d4e99e98ddc71b"
+
 dns-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/dns-equal/-/dns-equal-1.0.0.tgz#b39e7f1da6eb0a75ba9c17324b34753c47e0654d"
@@ -2523,7 +2571,7 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
-event-emitter@~0.3.5:
+event-emitter@^0.3.5, event-emitter@~0.3.5:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/event-emitter/-/event-emitter-0.3.5.tgz#df8c69eef1647923c7157b9ce83840610b02cc39"
   dependencies:
@@ -2695,6 +2743,12 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
 
+fast-animation-frame@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/fast-animation-frame/-/fast-animation-frame-0.3.0.tgz#3bf8bcf58f04a19716ae21ec0cbbea7af5399041"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 fast-deep-equal@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.1.0.tgz#c053477817c86b51daa853c81e059b733d023614"
@@ -2859,7 +2913,7 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.2.3:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.0.tgz#234f49cf770b7f35b40e790f636ceba0c3a0ab77"
   dependencies:
@@ -3500,6 +3554,10 @@ is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
 
+is-arrayish@^0.3.1:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
+
 is-binary-path@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-1.0.1.tgz#75f16642b480f187a711c814161fd3a4a7655898"
@@ -3751,13 +3809,17 @@ is-wsl@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
 
-isarray@0.0.1:
+isarray@0.0.1, isarray@~0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
 
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
+
+isarray@^2.0.1:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/isarray/-/isarray-2.0.4.tgz#38e7bcbb0f3ba1b7933c86ba1894ddfc3781bbb7"
 
 isexe@^2.0.0:
   version "2.0.0"
@@ -5065,6 +5127,10 @@ parse-passwd@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
 
+parse-svg-path@~0.1.1:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/parse-svg-path/-/parse-svg-path-0.1.2.tgz#7a7ec0d1eb06fa5325c7d3e009b859a09b5d49eb"
+
 parse5@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-1.5.1.tgz#9b7f3b0de32be78dc2401b17573ccaf0f6f59d94"
@@ -5076,6 +5142,10 @@ parseurl@~1.3.2:
 pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
+
+pasition@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/pasition/-/pasition-1.0.1.tgz#1d1a822280f63de2097c82dfbabe416457f3831e"
 
 path-browserify@0.0.0:
   version "0.0.0"
@@ -5186,6 +5256,18 @@ pkg-dir@^2.0.0:
 pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
+
+pngjs@^3.3.0:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.3.tgz#85173703bde3edac8998757b96e5821d0966a21b"
+
+point-at-length@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/point-at-length/-/point-at-length-1.1.0.tgz#0ad72ebd0980d7f5a1ab12296c055f9eb6b30e57"
+  dependencies:
+    abs-svg-path "~0.1.1"
+    isarray "~0.0.1"
+    parse-svg-path "~0.1.1"
 
 portfinder@^1.0.9:
   version "1.0.13"
@@ -5604,6 +5686,16 @@ q@^1.1.2:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
 
+qrcode@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/qrcode/-/qrcode-1.2.0.tgz#330d24313fbf8d429a806091af9525250239e44a"
+  dependencies:
+    can-promise "^0.0.1"
+    dijkstrajs "^1.0.1"
+    isarray "^2.0.1"
+    pngjs "^3.3.0"
+    yargs "^8.0.2"
+
 qs@6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
@@ -5769,6 +5861,14 @@ react-router@^4.3.1:
     prop-types "^15.6.1"
     warning "^4.0.1"
 
+react-swipe@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-swipe/-/react-swipe-5.1.1.tgz#5aeb08afc5efec13507aed6e5841360821e9f0d1"
+  dependencies:
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+    swipe-js-iso "^2.0.4"
+
 react-transform-catch-errors@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-transform-catch-errors/-/react-transform-catch-errors-1.0.2.tgz#1b4d4a76e97271896fc16fe3086c793ec88a9eeb"
@@ -5780,9 +5880,9 @@ react-transform-hmr@^1.0.3:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react@^16.4.0:
-  version "16.4.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.4.0.tgz#402c2db83335336fba1962c08b98c6272617d585"
+react@^16.4.1:
+  version "16.4.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.4.1.tgz#de51ba5764b5dbcd1f9079037b862bd26b82fe32"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -6310,6 +6410,12 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
+simple-swizzle@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
+  dependencies:
+    is-arrayish "^0.3.1"
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -6474,6 +6580,55 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
 
+sprite-animator@^1.7.5:
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/sprite-animator/-/sprite-animator-1.7.5.tgz#5f444a3da2c3e966016ce07858ca058a34cd37e7"
+  dependencies:
+    babel-runtime "^6.26.0"
+    bezier-easing "^2.0.3"
+    sprite-timeline "^1.8.3"
+
+sprite-core@^2.0.35-beta:
+  version "2.0.35-beta"
+  resolved "https://registry.yarnpkg.com/sprite-core/-/sprite-core-2.0.35-beta.tgz#6a9661dfb33660a21f686a6464d9fa52bf3fe8ff"
+  dependencies:
+    babel-decorators-runtime "^0.2.0"
+    babel-runtime "^6.26.0"
+    fast-animation-frame "^0.3.0"
+    sprite-animator "^1.7.5"
+    sprite-math "^1.0.1"
+    sprite-utils "^1.9.1"
+    svg-path-to-canvas "^1.8.1"
+
+sprite-math@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/sprite-math/-/sprite-math-1.0.1.tgz#52004ee5e212dac00486aa339419708b861f130d"
+  dependencies:
+    babel-runtime "^6.26.0"
+
+sprite-timeline@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/sprite-timeline/-/sprite-timeline-1.8.3.tgz#37ecaf96bbd5628192ba5c87fcffcaac665c8e03"
+  dependencies:
+    babel-runtime "^6.26.0"
+
+sprite-utils@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/sprite-utils/-/sprite-utils-1.9.1.tgz#260a1ccf448ac2930abc48ee58f26d53f6aa4171"
+  dependencies:
+    babel-decorators-runtime "^0.2.0"
+    babel-runtime "^6.26.0"
+    color-string "^1.5.2"
+
+spritejs@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/spritejs/-/spritejs-2.0.0.tgz#b38a990578375df6288ceccd35b97a36c56559ee"
+  dependencies:
+    axios "^0.16.2"
+    babel-decorators-runtime "^0.2.0"
+    babel-runtime "^6.26.0"
+    sprite-core "^2.0.35-beta"
+
 sshpk@^1.7.0:
   version "1.14.2"
   resolved "https://registry.yarnpkg.com/sshpk/-/sshpk-1.14.2.tgz#c6fc61648a3d9c4e764fd3fcdf4ea105e492ba98"
@@ -6625,6 +6780,14 @@ supports-color@^5.3.0, supports-color@^5.4.0:
   dependencies:
     has-flag "^3.0.0"
 
+svg-path-to-canvas@^1.8.1:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/svg-path-to-canvas/-/svg-path-to-canvas-1.8.2.tgz#24bdddad9b05466e9d98c52c5d254990ece3102d"
+  dependencies:
+    babel-runtime "^6.26.0"
+    point-at-length "^1.1.0"
+    sprite-math "^1.0.1"
+
 svgo@^0.7.0:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-0.7.2.tgz#9f5772413952135c6fefbf40afe6a4faa88b4bb5"
@@ -6666,6 +6829,10 @@ sw-toolbox@^3.4.0:
   dependencies:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
+
+swipe-js-iso@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/swipe-js-iso/-/swipe-js-iso-2.0.4.tgz#3371608112b30182e898f61d5bc02f7e38099c3d"
 
 symbol-observable@^1.2.0:
   version "1.2.0"
@@ -6787,6 +6954,10 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+to2to@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/to2to/-/to2to-1.0.1.tgz#bfa496ed91abcb20fe3ed6f0892e0d5e80a44a36"
 
 toposort@^1.0.0:
   version "1.0.7"
@@ -7258,6 +7429,10 @@ widest-line@^2.0.0:
   dependencies:
     string-width "^2.1.1"
 
+window-or-global@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/window-or-global/-/window-or-global-1.0.1.tgz#dbe45ba2a291aabc56d62cf66c45b7fa322946de"
+
 window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
@@ -7308,6 +7483,14 @@ write@^0.2.1:
 xdg-basedir@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
+
+xgplayer@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/xgplayer/-/xgplayer-1.0.2.tgz#14ce0e325710c92e07ce7b45323e529399d2f740"
+  dependencies:
+    babel-plugin-add-module-exports "^0.2.1"
+    event-emitter "^0.3.5"
+    pasition "^1.0.1"
 
 xml-name-validator@^2.0.1:
   version "2.0.1"
