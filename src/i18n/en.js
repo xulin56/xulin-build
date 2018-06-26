@@ -1,3 +1,4 @@
 export default {
-    HELLO : 'hello'
+    HELLO : 'hello',
+    SHIGE : 'Lonely at the top'
 }
