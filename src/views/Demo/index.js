@@ -12,7 +12,6 @@ import {Motion, spring} from 'react-motion';
 import QRCode from 'qrcode';
 import ReactSwipe from 'react-swipe';
 import Player from 'xgplayer';
-import BANNER from 'images/banner1.png';
 import './style.less';
 
 @autobind
@@ -45,17 +44,16 @@ export default class Demo extends React.Component{
 
     }
     componentDidMount(){
-        let player = new Player({
-            id:'vs',
-            url:'http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4',
-            poster: BANNER,
-            width:"98%",
-            height:"100%"
-            // poster: 'http://cfds.oss-cn-hongkong.aliyuncs.com/1529550842955.jpg',
-        });
-
-        //多个视频支持
-        player.emit('resourceReady', [{name: '高清', url: '/mp4/',cname:'高清'}, {name: '超清', url: '/mp5/',cname:'超清'}]);
+        // let player = new Player({
+        //     id:'vs',
+        //     url:'http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4',
+        //     width:"98%",
+        //     height:"100%"
+        //     // poster: 'http://cfds.oss-cn-hongkong.aliyuncs.com/1529550842955.jpg',
+        // });
+        //
+        // //多个视频支持
+        // player.emit('resourceReady', [{name: '高清', url: '/mp4/',cname:'高清'}, {name: '超清', url: '/mp5/',cname:'超清'}]);
         const {chandleId} = this.state;
         QRCode.toDataURL('https://crmwww-dev.ga096.cn?chandleId='+chandleId)
             .then(url => {
@@ -108,17 +106,17 @@ export default class Demo extends React.Component{
       const {nav,demo,num,arr,QRCODE} = this.state;
         return(
             <div className="demo">
-                <ReactSwipe className="carousel" swipeOptions={{
-                    continuous: true,
-                    speed: 400,
-                    auto: 3000,
-                    stopPropagation: false,
-                    callback: function(index, elem) {},
-                }}>
-                    <div><img src={BANNER} alt=""/></div>
-                    <div><img src={BANNER} alt=""/></div>
-                    <div><img src={BANNER} alt=""/></div>
-                </ReactSwipe>
+                {/*<ReactSwipe className="carousel" swipeOptions={{*/}
+                    {/*continuous: true,*/}
+                    {/*speed: 400,*/}
+                    {/*auto: 3000,*/}
+                    {/*stopPropagation: false,*/}
+                    {/*callback: function(index, elem) {},*/}
+                {/*}}>*/}
+                    {/*<div><img src={BANNER} alt=""/></div>*/}
+                    {/*<div><img src={BANNER} alt=""/></div>*/}
+                    {/*<div><img src={BANNER} alt=""/></div>*/}
+                {/*</ReactSwipe>*/}
                 <div id="vs"></div>
               <i className='iconfont icon-jiantou'></i>
               <h3>sldsljds <span>青丘之名的灵魂不会永远漂泊</span> </h3>
