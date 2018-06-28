@@ -850,7 +850,7 @@ function goTop(){
     </ul>
     <div id="scroll_end"></div>
 </div>*/
-function ScrollImgLeft(scroll_begin,scroll_end,scroll_div){
+function ScrollTextLeft(scroll_begin,scroll_end,scroll_div){
     var speed=60;
     var MyMar = null;
     scroll_end.innerHTML=scroll_begin.innerHTML;
@@ -885,7 +885,7 @@ function ScrollImgLeft(scroll_begin,scroll_end,scroll_div){
     </ul>
     <div id="end"></div>
 </div>*/
-function ScrollImgTop(scroll_begin,scroll_end,scroll_div){
+function ScrollTextTop(scroll_begin,scroll_end,scroll_div){
     var speed=50;
     var MyMar = null;
     scroll_end.innerHTML=scroll_begin.innerHTML;
@@ -968,7 +968,7 @@ export {
     getWindowHeight,
     getBottom,
     goTop,
-    ScrollImgLeft,
-    ScrollImgTop,
+    ScrollTextLeft,
+    ScrollTextTop,
     arrRandom
 }

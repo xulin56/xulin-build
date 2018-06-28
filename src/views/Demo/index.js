@@ -7,11 +7,11 @@ import {success,error} from 'components/Message';
 import {Link} from 'react-router-dom';
 import {browser} from 'src';
 import Son from './Son';
-import {getBottom,goTop,ScrollImgLeft,idDom,arrRandom,ScrollImgTop} from 'xulinjs';
+import {getBottom,goTop,ScrollTextLeft,idDom,arrRandom,ScrollTextTop} from 'xulinjs';
 import {Motion, spring} from 'react-motion';
 import QRCode from 'qrcode';
-import ReactSwipe from 'react-swipe';
-import Player from 'xgplayer';
+// import ReactSwipe from 'react-swipe';
+// import Player from 'xgplayer';
 import './style.less';
 
 @autobind
@@ -64,8 +64,8 @@ export default class Demo extends React.Component{
             .catch(err => {
                 console.error(err)
             })
-        ScrollImgLeft(idDom('scroll_begin'),idDom('scroll_end'),idDom('scroll_div'))
-        ScrollImgTop(idDom('begin'),idDom('end'),idDom('roll'))
+        ScrollTextLeft(idDom('scroll_begin'),idDom('scroll_end'),idDom('scroll_div'))
+        ScrollTextTop(idDom('begin'),idDom('end'),idDom('roll'))
         getBottom(()=>{
             console.log('ok')
         });
