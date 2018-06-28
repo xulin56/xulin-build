@@ -7,7 +7,7 @@ import {success,error} from 'components/Message';
 import {Link} from 'react-router-dom';
 import {browser} from 'src';
 import Son from './Son';
-import {getBottom,goTop,ScrollImgLeft,idDom,arrRandom,ScrollImgTop} from 'js';
+import {getBottom,goTop,ScrollImgLeft,idDom,arrRandom,ScrollImgTop} from 'xulinjs';
 import {Motion, spring} from 'react-motion';
 import QRCode from 'qrcode';
 import ReactSwipe from 'react-swipe';
