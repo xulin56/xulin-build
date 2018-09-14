@@ -4,7 +4,6 @@ import API from 'js/api';
 import Select from 'components/Select';
 import {Tabs,TabsItem} from 'components/Tabs';
 import {success,error} from 'components/Message';
-import Pagination from 'components/Pagination';
 import {Link} from 'react-router-dom';
 import {browser} from 'src';
 import Son from './Son';
@@ -184,7 +183,6 @@ export default class Demo extends React.Component{
                     </ul>
                     <div id="end"></div>
                 </div>
-                <Pagination total={100} current={2} pageSize={ 10 } change={ this.onPageChange } type="page" previousText={<span>pre</span>} nextText={<span>next</span>} goFirstText={<span>to</span>} goLastText={<span>end</span>}/>
             </div>
         )
     }
