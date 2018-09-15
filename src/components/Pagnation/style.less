@@ -1,0 +1,42 @@
+.pagnation {
+    display: flex;
+    align-items: center;
+    .pre ,.next{
+        cursor: pointer;
+        display: flex;
+        font-size:.14rem;
+        border:1px solid #ccc;
+    }
+    .pre {
+        margin-right:.1rem;
+    }
+    .next {
+        margin-left:.1rem;
+    }
+    .pages-list {
+        display: flex;
+        li {
+            padding: .05rem .1rem;
+            border:1px solid #ccc;
+            cursor: pointer;
+            font-size:.14rem;
+        }
+        li.active {
+            background-color: blue;
+            color:#fff;
+        }
+    }
+    .end-page,.begin-page {
+        padding: .05rem .1rem;
+        border:1px solid #ccc;
+        cursor: pointer;
+        font-size:.14rem;
+    }
+    .begin-page {
+        margin-right:.1rem;
+    }
+    .end-actice,.begin-actice {
+        background-color: blue;
+        color:#fff;
+    }
+}

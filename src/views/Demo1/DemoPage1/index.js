@@ -5,6 +5,7 @@ import {Scene, Sprite} from 'spritejs';
 import * as actions from 'store/action/i18n';
 import I18n from 'components/i18n';
 import Select from 'components/Select';
+import Pagnation from 'components/Pagnation';
 import {sStore} from 'js';
 import './style.less';
 @autobind
@@ -97,6 +98,7 @@ class DemoPage1 extends React.Component{
                         }
                     />
                 </div>
+                <Pagnation></Pagnation>
             </div>
         )
     }
