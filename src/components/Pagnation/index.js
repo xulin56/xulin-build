@@ -8,6 +8,8 @@ export default class Pagnation extends React.Component{
     static props = {
         total : propTypes.number.isRequire,
         pageSize : propTypes.number.isRequire,
+        nextCb : propTypes.func,
+        preCb : propTypes.func,
     }
     static defaultProps = {
         total : 70,
@@ -17,7 +19,9 @@ export default class Pagnation extends React.Component{
         currentPage : 1,
         pageNum : 0,
         endPage : '',
-        beginPage : 1
+        beginPage : 1,
+        arrive : false,
+        start : true
     }
     pageList = [];
     changeIndex = 1;
@@ -42,6 +46,24 @@ export default class Pagnation extends React.Component{
         }
     }
     changePage(pages) {
+        const {endPage} = this.state;
+        if(pages>1){
+            this.setState({
+                start : false,
+                arrive : false
+            });
+            if(pages === endPage) {
+              this.setState({
+                  start : false,
+                  arrive : true
+              });
+            }
+        }else {
+            this.setState({
+                start : true,
+                arrive : false
+            })
+        };
         this.setState({
             currentPage : pages
         });
@@ -50,6 +72,7 @@ export default class Pagnation extends React.Component{
       const {endPage} = this.state;
       this.setState({
           currentPage :endPage,
+          arrive : true
       });
       this.showBeginPage = true;
     }
@@ -57,10 +80,61 @@ export default class Pagnation extends React.Component{
       const {beginPage} = this.state;
       this.setState({
           currentPage :beginPage,
+          start : true
       });
       this.showEndPage = true;
     }
-    render(){
+    toNext() {
+      const {currentPage,endPage} = this.state;
+      const {nextCb} = this.props;
+      if(currentPage<=endPage) {
+        this.setState({
+            currentPage : currentPage+1,
+            start : false,
+            arrive : false
+        },()=>{
+          if(this.state.currentPage === endPage){
+            this.setState({
+                arrive : true
+            });
+            nextCb(this.state.currentPage,endPage);
+            return;
+          }else {
+            nextCb(this.state.currentPage,endPage);
+          }
+        });
+      }else {
+          this.setState({
+              arrive : true
+          })
+      }
+    }
+    toPre() {
+      const {currentPage,endPage} = this.state;
+      const {preCb} = this.props;
+      if(currentPage>1) {
+          this.setState({
+            currentPage : currentPage-1,
+            start : false,
+            arrive : false
+          },()=>{
+            if(this.state.currentPage==1){
+              this.setState({
+                  start : true
+              },()=>{
+                  preCb(this.state.currentPage,endPage)
+              });
+            }else {
+                preCb(this.state.currentPage,endPage)
+            }
+          })
+      }else {
+          this.setState({
+              start : true
+          })
+      }
+    }
+    step() {
         const {beginPage,endPage,currentPage} = this.state;
         const {total,pageSize} = this.props;
         if((total/pageSize)>5) {
@@ -104,10 +178,14 @@ export default class Pagnation extends React.Component{
                     this.pageList.push(i+this.changeIndex)
                 }
             }
-      }
+         }
+    }
+    render(){
+        const {beginPage,endPage,currentPage,start,arrive} = this.state;
+        this.step();
         return(
             <div className="pagnation">
-                <span className="pre">上一页</span>
+                <span  className={start?"pre disabled":"pre"} onClick={()=>!start&&this.toPre()}>上一页</span>
                 {
                     this.showBeginPage &&
                     <span className={currentPage===beginPage?"begin-page begin-actice":"begin-page"} onClick={this.beginEndPage}>{beginPage}</span>
@@ -125,7 +203,7 @@ export default class Pagnation extends React.Component{
                   this.showEndPage &&
                   <span className={currentPage===endPage?"end-page end-actice":"end-page"} onClick={this.toEndPage}>{endPage}</span>
                 }
-                <span className="next">下一页</span>
+                <span className={arrive?"next disabled":"next"} onClick={()=>!arrive && this.toNext()}>下一页</span>
             </div>
         )
     }

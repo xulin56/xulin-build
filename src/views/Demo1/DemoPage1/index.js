@@ -69,6 +69,12 @@ class DemoPage1 extends React.Component{
         }
 
     };
+    nextCb(currentPage,endPage) {
+        console.log(currentPage,endPage)
+    }
+    preCb(currentPage,endPage) {
+        console.log(currentPage,endPage)
+    }
     render(){
         const {demo} = this.state;
         return(
@@ -98,7 +104,7 @@ class DemoPage1 extends React.Component{
                         }
                     />
                 </div>
-                <Pagnation></Pagnation>
+                <Pagnation nextCb={(currentPage,endPage)=>this.nextCb(currentPage,endPage)} preCb={(currentPage,endPage)=>this.preCb(currentPage,endPage)}></Pagnation>
             </div>
         )
     }
