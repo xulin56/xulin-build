@@ -14,7 +14,7 @@ state = {
 tab(index) {
   console.log(index)
 }
-<Tabs labels={nav} callback={this.tab}>
+<Tabs labels={nav} tabClick={this.tab} tabIndex={1}>
   <TabsItem>2322323</TabsItem>
   <TabsItem>3343343</TabsItem>
 </Tabs>
