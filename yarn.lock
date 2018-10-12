@@ -5714,7 +5714,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@15.x, prop-types@^15.5.6, prop-types@^15.5.8:
+prop-types@15.x, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:
@@ -5897,6 +5897,13 @@ rc-menu@^7.3.0:
     rc-trigger "^2.3.0"
     rc-util "^4.1.0"
     resize-observer-polyfill "^1.5.0"
+
+rc-pagination@^1.17.3:
+  version "1.17.3"
+  resolved "http://registry.npm.taobao.org/rc-pagination/download/rc-pagination-1.17.3.tgz#4c5334adef607f7a80b90ca7501a1e962491aae5"
+  dependencies:
+    babel-runtime "6.x"
+    prop-types "^15.5.7"
 
 rc-select@^8.2.9:
   version "8.2.9"

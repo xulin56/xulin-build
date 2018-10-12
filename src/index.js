@@ -6,6 +6,9 @@ import {store} from 'store';
 import createBrowserHistory from 'history/createBrowserHistory';
 import {Router, Route} from 'react-router-dom';
 
+if(process.env.NODE_ENV != 'development'){
+      console.log = ()=>{}
+}
 
 export const browser=createBrowserHistory();
 window.onresize = document.getElementsByTagName('html')[0].style.fontSize = (document.documentElement.clientWidth / 3.75) +'px';

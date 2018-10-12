@@ -11,6 +11,7 @@ import {getBottom,goTop,ScrollTextLeft,idDom,arrRandom,ScrollTextTop} from 'xuli
 import {Motion, spring} from 'react-motion';
 import QRCode from 'qrcode';
 import Calendar from 'components/Calendar';
+import Pagnation from 'components/Pagnation';
 // import ReactSwipe from 'react-swipe';
 // import Player from 'xgplayer';
 import './style.less';
@@ -106,6 +107,9 @@ export default class Demo extends React.Component{
     selectDate(val) {
         console.log(val)
     }
+    changePagnation(a,b) {
+        console.log(a,b)
+    }
     render(){
       const {nav,demo,num,arr,QRCODE} = this.state;
         return(
@@ -188,6 +192,7 @@ export default class Demo extends React.Component{
                     <div id="end"></div>
                 </div>
                 <Calendar selectCb={this.selectDate}></Calendar>
+                <Pagnation count={80} onChange={this.changePagnation}></Pagnation>
             </div>
         )
     }
