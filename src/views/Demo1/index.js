@@ -4,6 +4,7 @@ import {Route} from 'react-router-dom';
 import DemoPage1 from './DemoPage1'
 import moment from 'moment';
 import Pagination from 'rc-pagination';
+import Calendar from 'components/Calendar';
 
 import 'rc-pagination/assets/index.css';
 import 'rc-select/assets/index.css';
@@ -15,6 +16,7 @@ export default class Demo1 extends React.Component{
         super(props);
         this.state={
             count : 70,
+            selectDateVal : '请选择日期'
         };
     }
 
@@ -27,9 +29,14 @@ export default class Demo1 extends React.Component{
     onChange(current, pageSize) {
         console.log(current, pageSize)
     }
-
+    selectDate(val) {
+        console.log(val);
+        this.setState({
+            selectDateVal : val
+        })
+    }
     render(){
-        const {count} = this.state;
+        const {count,selectDateVal} = this.state;
         return(
             <div className="demo1">
               <Pagination
@@ -41,6 +48,7 @@ export default class Demo1 extends React.Component{
                 onChange={this.onChange}
                 total={count}
                 />
+              <Calendar selectCb={this.selectDate} selectDateVal={selectDateVal}></Calendar>
             </div>
         )
     }
