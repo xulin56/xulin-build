@@ -1,0 +1,64 @@
+.sub-nav {
+    display: flex;
+    flex-direction: column;
+    background-color:#1c2b36;
+    color:#fff;
+    justify-content: center;
+    align-items: center;
+    .arrow {
+        width:8px;
+        height:8px;
+        border-top:1px solid #fff;
+        border-left:1px solid #fff;
+        transform : rotate(-45deg);
+    }
+    >.nav {
+        width:100%;
+        h2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:0 20px;
+            span {
+              font-size:20px;
+              line-height: 45px;
+            }
+
+        }
+        >dl {
+            dt {
+                cursor: pointer;
+                font-size:16px;
+                line-height: 36px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                span{
+                    padding-left:35px;
+                }
+                a {
+                  font-size:16px;
+                  color:#fff;
+                  display: block;
+                  width:100%;
+                  padding-left:35px;
+                }
+                a:hover {
+                    background-color:#f40;
+                }
+            }
+            dd {
+                a {
+                    display: block;
+                    font-size:16px;
+                    color:#fff;
+                    line-height: 36px;
+                    padding-left:50px;
+                }
+                a:hover {
+                    background-color:#f40;
+                }
+            }
+        }
+    }
+}

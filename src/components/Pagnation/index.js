@@ -1,12 +1,9 @@
 import React from 'react';
 import {autobind} from 'core-decorators';
-import moment from 'moment';
 import Pagination from 'rc-pagination';
 import PropTypes from 'prop-types';
 import 'rc-pagination/assets/index.css';
 import 'rc-select/assets/index.css';
-
-const format = 'YYYY-MM-DD';
 
 @autobind
 export default class Pagnation extends React.Component {
@@ -26,7 +23,7 @@ export default class Pagnation extends React.Component {
         console.log(current,pageSize)
     }
     render() {
-        const {count,onShowSizeChange,onChange,pageSize,cuurentPage} = this.props;
+        const {count,onChange,pageSize,cuurentPage} = this.props;
         return(
             <div className="pagnation">
                 <Pagination

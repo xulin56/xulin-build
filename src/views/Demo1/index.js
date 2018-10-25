@@ -1,15 +1,11 @@
 import React from 'react';
 import {autobind} from 'core-decorators';
-import {Route} from 'react-router-dom';
-import DemoPage1 from './DemoPage1'
-import moment from 'moment';
 import Pagination from 'rc-pagination';
 import Calendar from 'components/Calendar';
-
+import SubNav from 'components/SubNav';
 import 'rc-pagination/assets/index.css';
 import 'rc-select/assets/index.css';
 
-const format = 'YYYY-MM-DD';
 @autobind
 export default class Demo1 extends React.Component{
     constructor(props){
@@ -49,6 +45,7 @@ export default class Demo1 extends React.Component{
                 total={count}
                 />
               <Calendar selectCb={this.selectDate} selectDateVal={selectDateVal}></Calendar>
+              <div style={{width:"500px"}}><SubNav></SubNav></div>
             </div>
         )
     }
