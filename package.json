@@ -132,7 +132,8 @@
       "eqeqeq": 0,
       "default-case": 0,
       "no-self-compare": 0,
-      "no-useless-escape": 0
+      "no-useless-escape": 0,
+      "jsx-a11y/anchor-has-content": 0
     }
   }
 }
