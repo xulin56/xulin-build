@@ -20,3 +20,7 @@ ReactDOM.render(
         </Router>
     </Provider>,
 document.getElementById('root'));
+// //取消热加载
+// if (module.hot) {
+//   module.hot.accept();
+// }

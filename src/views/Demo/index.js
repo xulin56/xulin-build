@@ -7,7 +7,7 @@ import {success,error} from 'components/Message';
 import {Link} from 'react-router-dom';
 import {browser} from 'src';
 import Son from './Son';
-import {getBottom,goTop,ScrollTextLeft,idDom,arrRandom,ScrollTextTop} from 'xulinjs';
+import {getBottom,goTop,ScrollTextLeft,idDom,arrRandom,ScrollTextTop} from 'js';
 import {Motion, spring} from 'react-motion';
 import QRCode from 'qrcode';
 import Calendar from 'components/Calendar';

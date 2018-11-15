@@ -16,7 +16,6 @@ export default class HInput extends Component {
       eyeToggle : PropTypes.func,
       append : PropTypes.string,
       disabled : PropTypes.bool,
-      icon : PropTypes.string,
       errorHint : PropTypes.bool,
       onFocus : PropTypes.func,
       onBlur : PropTypes.func,
@@ -50,9 +49,8 @@ export default class HInput extends Component {
   }
 
   getVal(e) {
-      const { changeVal,name,clearVal,append } = this.props;
+      const { changeVal,name,clearVal } = this.props;
       let {value}=e.target;
-      let onOff=true;
       if(value&&clearVal&&!this.state.showClearBtn){
         this.getFocus();
       }
