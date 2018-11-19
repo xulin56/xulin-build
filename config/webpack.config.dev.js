@@ -164,12 +164,9 @@ module.exports = {
           // "style" loader turns CSS into JS modules that inject <style> tags.
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
+
           {
-              test: /\.less$/,
-              loaders: ['style-loader', 'css-loader', 'less-loader'],
-          },
-          {
-            test: /\.css$/,
+            test: /\.(css|less)$/,
             use: [
               require.resolve('style-loader'),
               {
@@ -198,6 +195,9 @@ module.exports = {
                   ],
                 },
               },
+              {
+                loader: require.resolve('less-loader') // compiles Less to CSS
+              }
             ],
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
