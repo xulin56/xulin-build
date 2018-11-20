@@ -17,28 +17,23 @@ class DemoPage1 extends React.Component{
         };
     }
     componentWillMount() {
+        const {dispatch} = this.props;
         switch(sStore.get('lang')){
             case 'zh' :
-              this.setState({
-                  selectVal : '中文'
-              });
+              this.change({label:'中文',value:'zh'});
               break;
             case 'en' :
-              this.setState({
-                  selectVal : '英文'
-              });
+              this.change({label:'英文',value:'en'});
               break;
             case 'fa' :
-                this.setState({
-                    selectVal : '法语'
-                });
+                this.change({label:'法语',value:'fa'});
+                break;
+            default :
+                this.change({label:'英文',value:'en'});
                 break;
         }
     }
     componentDidMount(){
-        if(sStore.get('langIndex')){
-            this.change('demo',sStore.get('langIndex'))
-        }
         const scene = new Scene('#demo-quickStart', {viewport: [770, 200], resolution: [3080, 800]})
 
         const layer = scene.layer()
@@ -69,16 +64,31 @@ class DemoPage1 extends React.Component{
         switch(item.value){
             case 'zh' :
                 dispatch(actions.getLang('zh'));
+                this.setState({
+                    selectVal : '中文'
+                });
                 sStore.set('lang','zh');
             break;
             case 'en' :
                 dispatch(actions.getLang('en'));
+                this.setState({
+                    selectVal : '英文'
+                });
                 sStore.set('lang','en');
             break;
             case 'fa' :
                 dispatch(actions.getLang('fa'));
+                this.setState({
+                    selectVal : '法语'
+                });
                 sStore.set('lang','fa');
             break;
+            default :
+                dispatch(actions.getLang('en'));
+                this.setState({
+                    selectVal : '英文'
+                });
+                sStore.set('lang','en');
         }
 
     };
