@@ -1,6 +1,7 @@
 import React from 'react';
 import {autobind} from 'core-decorators';
 import PropTypes from 'prop-types';
+import {sStore} from 'js';
 import './style.less';
 
 @autobind
@@ -34,7 +35,7 @@ export default class HSelect extends React.Component{
       showSelectItem : false,
       selectVal : '请选择'
     }
-    componentWillMount() {
+    componentDidMount() {
         this.setState((state,props)=>({
             selectVal : props.val
         }));

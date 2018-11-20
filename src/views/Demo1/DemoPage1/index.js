@@ -4,7 +4,7 @@ import {autobind} from 'core-decorators';
 import {Scene, Sprite} from 'spritejs';
 import * as actions from 'store/action/i18n';
 import I18n from 'components/i18n';
-import Select from 'components/Select';
+import HSelect from 'components/HSelect';
 import {sStore} from 'js';
 import './style.less';
 @autobind
@@ -12,10 +12,29 @@ class DemoPage1 extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            demo : '1'
+            demo : '1',
+            selectVal : '请选择语言'
         };
     }
-
+    componentWillMount() {
+        switch(sStore.get('lang')){
+            case 'zh' :
+              this.setState({
+                  selectVal : '中文'
+              });
+              break;
+            case 'en' :
+              this.setState({
+                  selectVal : '英文'
+              });
+              break;
+            case 'fa' :
+                this.setState({
+                    selectVal : '法语'
+                });
+                break;
+        }
+    }
     componentDidMount(){
         if(sStore.get('langIndex')){
             this.change('demo',sStore.get('langIndex'))
@@ -45,26 +64,21 @@ class DemoPage1 extends React.Component{
         layer.append(robot)
 
     }
-    change(name,value){
-        this.setState({[name]:value});
-        sStore.set('langIndex',value);
+    change(item){
         const {dispatch} = this.props;
-        switch(value){
-            case 1 :
+        switch(item.value){
+            case 'zh' :
                 dispatch(actions.getLang('zh'));
                 sStore.set('lang','zh');
             break;
-            case 2 :
+            case 'en' :
                 dispatch(actions.getLang('en'));
                 sStore.set('lang','en');
             break;
-            case 3 :
+            case 'fa' :
                 dispatch(actions.getLang('fa'));
                 sStore.set('lang','fa');
             break;
-            default :
-                dispatch(actions.getLang('zh'));
-                sStore.set('lang','zh');
         }
 
     };
@@ -75,7 +89,7 @@ class DemoPage1 extends React.Component{
         console.log(currentPage,endPage)
     }
     render(){
-        const {demo} = this.state;
+        const {demo,selectVal} = this.state;
         return(
             <div className="Demo-page1">
                <div id='demo-quickStart'></div>
@@ -83,27 +97,12 @@ class DemoPage1 extends React.Component{
                 <div className='demo-content'>
                     <button><I18n message={'HELLO'}></I18n></button>
                     <h4><I18n message={'SHIGE'}></I18n></h4>
-                    <Select
-                        name="demo"
-                        value={demo}
-                        onChange={this.change}
-                        placeholder='请输入选项'
-                        config={{
-                            options:[{
-                                label:'中文',
-                                value:1
-                            },{
-                                label:'英文',
-                                value:2
-                            },{
-                                label:'法语',
-                                value:3
-                            }],
-                        }
-                        }
-                    />
+                    <HSelect
+                      val={selectVal}
+                      selectCb={this.change}
+                      selectList={[{label:'中文',value:"zh"},{label:'英文',value:"en"},{label:'法语',value:'fa'}]}></HSelect>
                 </div>
-              
+
             </div>
         )
     }
