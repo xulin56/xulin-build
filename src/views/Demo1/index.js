@@ -10,6 +10,7 @@ import 'rc-pagination/assets/index.css';
 import 'rc-select/assets/index.css';
 import ScrollNotice from 'components/ScrollNotice';
 import HSelect from 'components/HSelect';
+import Gotop from 'components/Gotop';
 
 @autobind
 export default class Demo1 extends React.Component{
@@ -98,6 +99,7 @@ export default class Demo1 extends React.Component{
               <HInput type="text" icon='B-3' append={eye} value={pw} changeVal={(name,pw)=>this.setState({pw})} eyeToggle={this.eyeToggle} clearVal={()=>this.setState({pw:''})} />
               <AcrossScroll dataList={dataList1} rightPull={this.rightPull} leftPull={this.leftPull} more={more} noDate={noDate}></AcrossScroll>
               <HSelect selectList={[{label:'中文',value:'zh'},{label:'英文',value:'en'}]} selectCb={this.selectList} val="请选择列表"></HSelect>
+              <Gotop></Gotop>
             </div>
         )
     }
