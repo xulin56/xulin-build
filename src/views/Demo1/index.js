@@ -11,6 +11,7 @@ import 'rc-select/assets/index.css';
 import ScrollNotice from 'components/ScrollNotice';
 import HSelect from 'components/HSelect';
 import Gotop from 'components/Gotop';
+import Address from 'components/Address';
 
 @autobind
 export default class Demo1 extends React.Component{
@@ -100,6 +101,7 @@ export default class Demo1 extends React.Component{
               <AcrossScroll dataList={dataList1} rightPull={this.rightPull} leftPull={this.leftPull} more={more} noDate={noDate}></AcrossScroll>
               <HSelect selectList={[{label:'中文',value:'zh'},{label:'英文',value:'en'}]} selectCb={this.selectList} val="请选择列表"></HSelect>
               <Gotop></Gotop>
+              <Address></Address>
             </div>
         )
     }
