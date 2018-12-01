@@ -1,6 +1,6 @@
 /*reset*/
 header,nav,section,footer,article,aside{display:block;box-sizing:border-box;}
-html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,img,span,em,i,b,a,table,thead,tbody,tfoot,th,tr,td,form,input,textarea,select,option,pre,hr,label,button{padding:0;margin:0;box-sizing:border-box; }
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,img,span,em,i,b,a,table,thead,tbody,tfoot,th,tr,td,form,input,textarea,select,option,pre,hr,label,button{padding:0;margin:0;box-sizing:border-box;-webkit-tap-highlight-color: rgba(0,0,0,0); }
 li{list-style:none;}
 img{border:none;vertical-align:top; pointer-events: none;}
 em,i{font-style:normal;}
@@ -10,7 +10,7 @@ input,textarea,select,button{outline:none;font-family:arial,helvetica,sans-serif
 textarea{resize:none;overflow:auto;}
 input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none;}
 html{width:100%;font-size:62.5%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
-body{width:100%;font:.14rem Microsoft YaHei,tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;background-color: #F9F8F9;color: #333;}
+body{width:100%;font:.14rem Microsoft YaHei,tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;color: #333;background-color: #F9F8F9;}
 /*单行与多行省略*/
 .omit{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;word-break:break-all;}
 *[class*="multiLine"]{display:-webkit-box;overflow:hidden;word-wrap:break-word;-webkit-box-orient:vertical;-webkit-line-clamp:1;}
@@ -35,14 +35,15 @@ button {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-::-moz-placeholder { color: #ccc; }
-::-webkit-input-placeholder { color:#ccc}
-:-ms-input-placeholder { color:#ccc }
+::-moz-placeholder { color: #bbb; }
+::-webkit-input-placeholder { color:#bbb}
+:-ms-input-placeholder { color:#bbb }
+
 .arrow {
     width:.08rem;
     height:.08rem;
-    border-top:1px solid #333;
-    border-right:1px solid #333;
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
     display: block;
     transform:rotate(135deg);
 }
