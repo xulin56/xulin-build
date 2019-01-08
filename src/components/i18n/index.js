@@ -2,6 +2,8 @@ import React from 'react';
 import {autobind} from 'core-decorators';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as actionCreators from './actions';
 import {ZH,EN,FA} from 'i18n';
 import {sStore} from 'js';
 
@@ -52,11 +54,10 @@ class I18n extends React.Component{
         )
     }
 }
-
-const mapStateToProps = (state,ownProps)=>{
-    return {
-        lang : state.lang.lang
-    }
+const mapStateToProps = (state) => {
+    return state.I18nReducers.toJS();
 };
-
-export default connect(mapStateToProps)(I18n)
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators(actionCreators, dispatch);
+};
+export default connect(mapStateToProps, mapDispatchToProps)(I18n);
