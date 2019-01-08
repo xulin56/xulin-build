@@ -1,6 +1,6 @@
 import {myAjax,dataType,lStore,isEmpty} from './index';
-import {store} from 'store';
-import * as action from 'store/action/loading';
+import store from 'store';
+import {startLoading,stopLoading} from 'views/App/actions';
 import {error} from 'components/Message';
 import md5 from 'md5';
 let baseUrl='/app/http/';
@@ -16,11 +16,11 @@ const ajaxWrap=function(json){
         headers:json.headers,
         before:function(xhr){
             //loading显示处理
-            store.dispatch(action.getLoading(true));;
+            store.dispatch(startLoading());
         },
         after:function(xhr){
             //loading隐藏处理
-            store.dispatch(action.getLoading(false));;
+            store.dispatch(stopLoading());
         },
         success:function(data){
             //只要成功都会走
@@ -32,7 +32,7 @@ const ajaxWrap=function(json){
         },
         error:function(err){
             error(err+'网络异常');
-            store.dispatch(action.getLoading(false));
+            store.dispatch(stopLoading());
         },
     });
 };
