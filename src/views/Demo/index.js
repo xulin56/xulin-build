@@ -64,7 +64,7 @@ export class Demo extends React.Component {
         return <div className='demo'>
             <div>{this.props.row}</div>
             <div>{this.props.index}</div>
-            <button onClick={()=>this.props.add(1)}>click</button>
+            <button onClick={()=>this.props.add(1)}>add</button>
             <button onClick={()=>this.props.mul(3)}>mul</button>
               <button><I18n message={'HELLO'}></I18n></button>
               <h4><I18n message={'SHIGE'}></I18n></h4>
