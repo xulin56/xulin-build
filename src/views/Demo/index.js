@@ -4,9 +4,6 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import API from 'js/api';
 import * as actionCreators from './actions';
-import HSelect from 'components/HSelect';
-import store from 'src/store';
-import {sStore} from 'js';
 
 @autobind
 export class Demo extends React.Component {
@@ -14,17 +11,13 @@ export class Demo extends React.Component {
         selectVal : '请选择语言'
     }
     componentWillMount() {
-      API.GetYearDate({
-          code: 'bitcoin',
-          startTime: 1496651489384,
-          endTime: 1528187468359
-      },(res)=>{
-          if(res.code==='0000'){
-          }
-      });
+      let userName = '003';
+      let password = '123456';
+      API.post(`/bfa/login?staffNum=${userName}&password=${password}`).then(res=>{
+          console.log(res.data)
+      })
     }
     render() {
-        const {selectVal} = this.state;
         return <div className='demo'>
             <div>{this.props.row}</div>
             <div>{this.props.index}</div>
