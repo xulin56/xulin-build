@@ -16,18 +16,14 @@ export class Demo extends React.Component {
         selectVal : '请选择语言'
     }
     componentWillMount() {
-      API.GetYearDate({
-          code: 'bitcoin',
-          startTime: 1496651489384,
-          endTime: 1528187468359
-      },(res)=>{
-          if(res.code==='0000'){
-          }
-      });
+        let userName = '003';
+      let password = '123456';
+      API.post(`/bfa/login?staffNum=${userName}&password=${password}`).then(res=>{
+          console.log(res.data)
+      })
     }
     change(item){
         const {dispatch} = this.props;
-        console.log(this.props)
         switch(item.value){
             case 'zh' :
                 store.dispatch(getLang('zh'));

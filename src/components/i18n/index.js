@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actionCreators from './actions';
-import {ZH,EN,FA} from 'i18n';
+import {ZH,EN,FA} from 'language';
 import {sStore} from 'js';
 
 @autobind
@@ -30,6 +30,7 @@ class I18n extends React.Component{
 
     }
     componentWillUpdate(state) {
+        console.log(this.props)
         const {message} = this.props;
         switch (state.lang) {
             case 'zh' :
@@ -47,11 +48,7 @@ class I18n extends React.Component{
     }
     render(){
         const {txt} = this;
-        return(
-            <div className="i18n">
-                <span>{txt}</span>
-            </div>
-        )
+        return txt
     }
 }
 const mapStateToProps = (state) => {
