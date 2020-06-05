@@ -17,10 +17,21 @@ export class Demo extends React.Component {
     }
     componentWillMount() {
         let userName = '003';
-      let password = '123456';
-      API.post(`/bfa/login?staffNum=${userName}&password=${password}`).then(res=>{
-          console.log(res.data)
-      })
+        let password = '123456';
+        API.post(`/bfa/login?staffNum=${userName}&password=${password}`).then(res=>{
+            console.log(res.data)
+        });
+        if(sStore.get('lang')){
+            let langVal = {
+                en : '英文',
+                zh : '中文',
+                fa : '法语'
+
+            }
+            this.setState({
+                selectVal : langVal[sStore.get('lang')]
+            })
+        }
     }
     change(item){
         const {dispatch} = this.props;
@@ -31,21 +42,21 @@ export class Demo extends React.Component {
                     selectVal : '中文'
                 });
                 sStore.set('lang','zh');
-            break;
+                break;
             case 'en' :
                 store.dispatch(getLang('en'));
                 this.setState({
                     selectVal : '英文'
                 });
                 sStore.set('lang','en');
-            break;
+                break;
             case 'fa' :
                 store.dispatch(getLang('fa'));
                 this.setState({
                     selectVal : '法语'
                 });
                 sStore.set('lang','fa');
-            break;
+                break;
             default :
                 store.dispatch(getLang('en'))
                 this.setState({
@@ -62,13 +73,13 @@ export class Demo extends React.Component {
             <div>{this.props.index}</div>
             <button onClick={()=>this.props.add(1)}>click</button>
             <button onClick={()=>this.props.mul(3)}>mul</button>
-              <button><I18n message={'HELLO'}></I18n></button>
-              <h4><I18n message={'SHIGE'}></I18n></h4>
-              <HSelect
-                        val={selectVal}
-                        selectCb={this.change}
-                        selectList={[{label:'中文',value:"zh"},{label:'英文',value:"en"},{label:'法语',value:'fa'}]}></HSelect>
-          </div>
+            <button><I18n message={'HELLO'}></I18n></button>
+            <h4><I18n message={'SHIGE'}></I18n></h4>
+            <HSelect
+                val={selectVal}
+                selectCb={this.change}
+                selectList={[{label:'中文',value:"zh"},{label:'英文',value:"en"},{label:'法语',value:'fa'}]}></HSelect>
+        </div>
     }
 }
 

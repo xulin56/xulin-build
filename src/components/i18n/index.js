@@ -21,7 +21,8 @@ class I18n extends React.Component{
         };
         if(sStore.get('lang')){
             let currentLang = sStore.get('lang');
-            const {message} = this.props;
+            const {message,getLang} = this.props;
+            getLang(currentLang);
             this.txt = langObj[currentLang][message];
         }else {
             const {message} = this.props;
@@ -41,7 +42,7 @@ class I18n extends React.Component{
                 break;
             case 'fa' :
                 this.txt = FA[message];
-            break;
+                break;
             default :
                 this.txt = ZH[message];
         }

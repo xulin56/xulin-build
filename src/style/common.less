@@ -47,3 +47,79 @@ button {
     display: block;
     transform:rotate(135deg);
 }
+
+/*上三角*/
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 0 10px 10px;
+  border-color: transparent transparent #c5c5c5 transparent;
+}
+/*左上三角形*/
+.left-top-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 10px;
+  border-color: #c5c5c5 transparent transparent #c5c5c5;
+}
+/*正五边形*/
+.pentagon {
+  width: 54px;
+  position: relative;
+  border-width: 50px 18px 0;
+  border-style: solid;
+  border-color: #c5c5c5 transparent;
+}
+
+.pentagon::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -85px;
+  left: -18px;
+  border-width: 0 45px 35px;
+  border-style: solid;
+  border-color: transparent transparent #c5c5c5;
+}
+/*气泡框*/
+.bubble-tip {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  position: relative;
+  background-color: #fff;
+}
+.bubble-tip::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #ffffff transparent transparent;
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  z-index: 2;
+}
+.bubble-tip::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #c5c5c5 transparent transparent;
+  position: absolute;
+  top: 5px;
+  left: -11px;
+  z-index: 1;
+}
+
+
