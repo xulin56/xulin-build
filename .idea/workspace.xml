@@ -2,60 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1339b34-0081-4993-85a1-6c488fbda5c8" name="默认" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/common.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/common.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Demo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Demo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/i18n/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/I18n/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/i18n/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/I18n/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/i18n/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/I18n/reducers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>getQueryString</find>
-      <find>json.header</find>
-      <find>\\</find>
-      <find>json.progress</find>
-      <find>json.xhr</find>
-      <find>myAjax</find>
-      <find>application/json</find>
-      <find>ajax</find>
-      <find>closeToForm</find>
-      <find>xulin</find>
-      <find>Type(</find>
-      <find>Type</find>
-      <find>Type(o</find>
-      <find>main.l</find>
-      <find>`</find>
-      <find>prop-types</find>
-      <find>class=</find>
-      <find>Motion</find>
-      <find>opt</find>
-      <find>isNumb</find>
-      <find>&gt;</find>
-      <find>isNum</find>
-      <find>animateEle</find>
-      <find>bitmap</find>
-      <find>lStore</find>
-      <find>langIndex</find>
-      <find>xulinjs</find>
-      <find>ScrollTextTop</find>
-      <find>ScrollImgLeft</find>
-      <find>ScrollTextLeft</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>@</replace>
-      <replace>dataType</replace>
-      <replace>SStore</replace>
-      <replace>sStore</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/config</dir>
-      <dir>$PROJECT_DIR$/public</dir>
-      <dir>$PROJECT_DIR$/scripts</dir>
-      <dir>$PROJECT_DIR$/src/components</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
