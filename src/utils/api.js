@@ -1,14 +1,17 @@
+
 import axios from 'axios';
-import {error} from 'components/Message';
+// import {error} from 'components/Message';
 import urls from './urls';
 import {lStore} from './index';
 import store from 'store';
 import {startLoading,stopLoading} from 'views/App/actions';
 import qs from 'qs';
-import {browser} from 'src';
+import {browser} from '@';
+import { Message } from '@alifd/next';
 
+const error = Message.error;
 const axiosInstance = axios.create({
-  baseURL: '/mock',
+  baseURL: '',
   // 自定义请求头信息
   headers: {
     'X-Requested-With': 'XMLHttpRequest',
@@ -70,7 +73,7 @@ axiosInstance.interceptors.request.use(
       desc: '错误的传参!',
       data: {},
     }
-    error(err.desc)
+    // error(err.desc)
     return Promise.reject(err)
   },
 );
@@ -95,7 +98,8 @@ axiosInstance.interceptors.response.use(
       });
     }
     if (res.rc !== 0 && !nopreprocess) {
-      error(res.msg);
+      // error(res.msg);
+      error('error');
       return Promise.reject(res);
     }
     return res;

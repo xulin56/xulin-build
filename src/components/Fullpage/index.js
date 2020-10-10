@@ -48,7 +48,7 @@ export default class Fullpage extends React.Component{
       //   e.wheelDelta为负数时向下滑动
       //
       if(e.wheelDelta<0){
-          console.log(11)
+        //   console.log(11)
           if(this.state.fullPage>=3){
               return false
           }

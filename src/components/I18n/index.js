@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actionCreators from './actions';
 import {ZH,EN,FA} from 'language';
-import {sStore} from 'js';
+import {sStore} from '@/utils';
 
 @autobind
 class I18n extends React.Component{
@@ -31,7 +31,6 @@ class I18n extends React.Component{
 
     }
     componentWillUpdate(state) {
-        console.log(this.props)
         const {message} = this.props;
         switch (state.lang) {
             case 'zh' :

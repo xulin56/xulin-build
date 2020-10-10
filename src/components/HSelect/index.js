@@ -1,7 +1,7 @@
 import React from 'react';
 import {autobind} from 'core-decorators';
 import PropTypes from 'prop-types';
-import {sStore} from 'js';
+import {sStore} from '@/utils';
 import './style.less';
 
 @autobind

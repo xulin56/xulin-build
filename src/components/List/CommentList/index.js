@@ -21,7 +21,7 @@ export default class CommentList extends React.Component {
       page : pageIndex+1,
       pageSize : 10
     }
-    console.log(params,this.props.url)
+    // console.log(params,this.props.url)
   }
   render(){
     const {listData,url} = this.props;

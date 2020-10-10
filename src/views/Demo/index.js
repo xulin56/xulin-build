@@ -2,13 +2,14 @@ import React from 'react';
 import {autobind} from 'core-decorators';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import API from 'js/api';
+import API from '@/utils/api';
 import * as actionCreators from './actions';
 import HSelect from 'components/HSelect';
 import I18n from 'components/I18n';
-import store from 'src/store';
+import store from '@/store';
 import {getLang} from 'components/I18n/actions';
-import {sStore} from 'js';
+import {sStore} from '@/utils';
+import { Button } from '@alifd/next';
 
 @autobind
 export class Demo extends React.Component {
@@ -18,8 +19,8 @@ export class Demo extends React.Component {
     componentWillMount() {
         let userName = '003';
         let password = '123456';
-        API.post(`/bfa/login?staffNum=${userName}&password=${password}`).then(res=>{
-            console.log(res.data)
+        API.post("/api/test/userInfor").then(res=>{
+            alert(res)
         });
         if(sStore.get('lang')){
             let langVal = {
@@ -70,6 +71,7 @@ export class Demo extends React.Component {
         const {selectVal} = this.state;
         return <div className='demo'>
             <div>{this.props.row}</div>
+            <Button type="primary">Prirmary</Button>
             <div>{this.props.index}</div>
             <button onClick={()=>this.props.add(1)}>click</button>
             <button onClick={()=>this.props.mul(3)}>mul</button>
