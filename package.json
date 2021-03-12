@@ -69,7 +69,7 @@
     "rc-pagination": "^1.17.3",
     "rc-select": "^8.2.9",
     "react": "^16.4.1",
-    "react-dev-utils": "^5.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.4.0",
     "react-motion": "^0.5.2",
     "react-redux": "^6.0.0",
